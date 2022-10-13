@@ -14,7 +14,7 @@ public class floatData : ScriptableObject
 
     }
 
-    public void ammoCount(float ammo)
+    public void UpdateAmmoCount(float ammo)
     {
 
         value += ammo;
