@@ -2,8 +2,7 @@ using UnityEngine;
 
 [CreateAssetMenu]
 
-public class floatData : ScriptableObject
-{
+public class floatData : ScriptableObject {
 
     public float value;
 
@@ -14,11 +13,12 @@ public class floatData : ScriptableObject
 
     }
 
-    public void ammoCount(float ammo)
+    public void WalkingSpeed(float speed)
     {
 
-        value += ammo;
+        value = speed;
 
     }
+
 
 }
