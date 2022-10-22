@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FlashlightDown : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private void Update() 
     {
         
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+
+            GetComponent<Renderer>().enabled = !GetComponent<Renderer>().enabled;
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

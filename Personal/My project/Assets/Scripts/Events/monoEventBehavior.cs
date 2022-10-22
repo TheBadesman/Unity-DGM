@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class monoEventBehavior : MonoBehaviour
 {
 
-    public UnityEvent startEvent, awakeEvent, disableEvent;
+    public UnityEvent startEvent, awakeEvent, disableEvent, invisibleEvent, visibleEvent;
 
     private void Awake() 
     {
@@ -25,6 +25,20 @@ public class monoEventBehavior : MonoBehaviour
 
         disableEvent.Invoke();
         
+    }
+
+    private void OnBecameInvisible() 
+    {
+
+        invisibleEvent.Invoke();
+
+    }
+
+    private void OnBecameVisible() 
+    {
+
+        visibleEvent.Invoke(); 
+           
     }
 
 }
