@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class destoryOutOfBoundsLazer : MonoBehaviour
+public class destoryOutOfBounds : MonoBehaviour
 {
 
     //Public floats for later
