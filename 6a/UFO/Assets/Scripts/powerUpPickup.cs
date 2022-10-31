@@ -1,11 +1,17 @@
 using UnityEngine;
+using System.Collections;
 
 public class powerUpPickup : MonoBehaviour
 {
     //Sets up the floats for later use
     public float speed;
 
-    public bool hasIncreasedFire = false;
+    public bool HasIncreaseFire;
+
+    public bool hasIncreaseFire
+    {
+         get {return HasIncreaseFire; }
+    }
 
     //Moves the power up
     void Update()
@@ -15,14 +21,26 @@ public class powerUpPickup : MonoBehaviour
 
     }
     //destruction of the power up and log to show its working
-    private void OnTriggerEnter(Collider Player)
+    private void OnTriggerEnter(Collider other)
     {
+        // checks the tag, if it collided with play tells it that the player now has the power up and prints that in the Debug
+        if (other.gameObject.tag == "Player")
+        {
 
-        Destroy(gameObject);
+            Destroy(gameObject);
 
-        Debug.Log("Player has the increased fire powerup");
+            Debug.Log("Player has the increased fire powerup");
 
-        public bool hasIncreasedFire = true;
+            HasIncreaseFire = true;
+
+            if (HasIncreaseFire == true)
+            {
+
+                Debug.Log("Check for Inventory");
+
+            }
+
+        }
 
     }
 }
