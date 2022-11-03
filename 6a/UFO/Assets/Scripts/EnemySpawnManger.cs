@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawnManger : MonoBehaviour
 {
-    private float spawnRangeX = 15f;
+    private float spawnRangeX = 14f;
     private float spawnPosZ = 20f;
 
     //Array to store UFO ships
