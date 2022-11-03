@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1962045771251505289}
   - component: {fileID: 6859352321610475842}
   - component: {fileID: -8942374309591798625}
+  - component: {fileID: 2519669624483005183}
   m_Layer: 0
   m_Name: UFO_Mothership
   m_TagString: Enemy
@@ -126,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upperBounds: 30
-  lowerBounds: -10
+  lowerBounds: -20
 --- !u!54 &-8942374309591798625
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,3 +144,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2519669624483005183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151355528457356188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd952588cf23414a900d02c8b01ff8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

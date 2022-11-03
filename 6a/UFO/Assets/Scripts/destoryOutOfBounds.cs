@@ -6,9 +6,9 @@ public class destoryOutOfBounds : MonoBehaviour
 {
 
     //Public floats for later
-    public float upperBounds = 30.0f;
+    public float upperBounds = 50.0f;
 
-    public float lowerBounds = -15.0f;
+    public float lowerBounds = -20.0f;
 
     private void Awake()
     {

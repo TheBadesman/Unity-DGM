@@ -47,10 +47,10 @@ public class playerController : MonoBehaviour
 
     }
     // Deleting objects with triggers that hit the player
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision PowerUp)
     {
         
-        Destroy(other.gameObject);
+        Destroy(PowerUp.gameObject);
 
     }
 }
