@@ -11,9 +11,6 @@ public class powerUp : MonoBehaviour
 
     public Color endColor = Color.red;
 
-    //Sets spawn delay, and delay before the second spawn
-    public float powerUpSpawnDelay = 15f;
-
     //Sets up the floats for later use
     public float speed;
 
