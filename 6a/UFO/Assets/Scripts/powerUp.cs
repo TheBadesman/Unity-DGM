@@ -1,8 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class powerUpPickup : MonoBehaviour
+public class powerUp : MonoBehaviour
 {
+    //Sets spawn delay, and delay before the second spawn
+    public float powerUpSpawnDelay = 15f;
+
+    public float powerUpSpawnTimer = Random.Range(15f, 30f);
+
     //Sets up the floats for later use
     public float speed;
 
