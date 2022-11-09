@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawnManger : MonoBehaviour
+public class enemySpawnManger : MonoBehaviour
 {
     //The ranges between the spawns
     private float spawnRangeX = 14f;

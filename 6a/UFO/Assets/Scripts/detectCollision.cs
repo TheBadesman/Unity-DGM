@@ -4,9 +4,22 @@ using UnityEngine;
 
 public class detectCollision : MonoBehaviour
 {
+    //calls the score manager and references the manager
+    public ScoreManager scoreManager;
+
+    public int scoreToGive;
+
+    void Start()
+    {
+        //finds and references the score manager
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+
+    }
+
     //Code to destory the bolt and the UFO
     public void OnTriggerEnter(Collider other)
     {
+        scoreManager.IncreaseScore(scoreToGive);
         if (other.gameObject.tag == "Player")
         {
             Destroy(gameObject);
