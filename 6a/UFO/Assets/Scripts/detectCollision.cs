@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class detectCollision : MonoBehaviour
 {
+    public GameManager gameManager;
+
     //calls the score manager and references the manager
     public ScoreManager scoreManager;
 
@@ -13,6 +15,8 @@ public class detectCollision : MonoBehaviour
     {
         //finds and references the score manager
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
     }
 

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class playerController : MonoBehaviour
 {
+    public GameManager gameManager;
 
     //set up for the blaster and lazer
 
@@ -16,6 +17,13 @@ public class playerController : MonoBehaviour
     public float speed = 10;
 
     public float xRange = 23;
+    //reference to game manager object
+    void Start()
+    {
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+    }
 
     // Player movement script, updates every frame
     void Update()
@@ -39,12 +47,17 @@ public class playerController : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
-            //creating the laser at blasters pos, maintains objects rotation
+            //creating the laser at blasters pos, maintains objects rotation, and stops the spawn of the bolts
             Instantiate(laser, blaster.transform.position, laser.transform.rotation);
         }
 
+    }
+
+    public void OnDestroy()
+    {
+        gameManager.isGameOver = true;
     }
     // Deleting objects with triggers that hit the player
     private void OnCollisionEnter(Collision PowerUp)

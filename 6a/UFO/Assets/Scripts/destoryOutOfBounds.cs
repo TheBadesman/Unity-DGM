@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class destoryOutOfBounds : MonoBehaviour
 {
+    public GameManager gameManager;
 
     //Public floats for later
     public float upperBounds = 50.0f;
 
     public float lowerBounds = -20.0f;
 
-    private void Awake()
+    //reference to game manager object
+    void Start()
     {
-        
-        //Time.timeScale = 1;
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
     }
 
@@ -30,7 +32,7 @@ public class destoryOutOfBounds : MonoBehaviour
         {
 
             Destroy(gameObject);
-            //Time.timeScale = 0;
+            gameManager.isGameOver = true;
 
         }
 
