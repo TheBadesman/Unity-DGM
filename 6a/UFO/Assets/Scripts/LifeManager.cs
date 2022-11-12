@@ -45,6 +45,7 @@ public class LifeManager : MonoBehaviour
 
             gameManager.isGameOver = true;
             lives = 0;
+            Destroy (GameObject.FindWithTag("Player"));
 
         }
 

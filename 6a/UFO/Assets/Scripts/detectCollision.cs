@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class detectCollision : MonoBehaviour
 {
+    //Plays the assigned audio clip
+    public AudioClip clip;
+    //Calls the game manager
     public GameManager gameManager;
-
     //calls the score manager and references the manager
     public ScoreManager scoreManager;
     //Calls the life manager and creates the amount of life to be lost
@@ -32,16 +34,24 @@ public class detectCollision : MonoBehaviour
         scoreManager.IncreaseScore(scoreToGive);
         if (other.gameObject.tag == "Player")
         {
+            
             Destroy(gameObject);
+
             lifeManager.DecreaseLives(LifeToLose);
+
+            AudioSource.PlayClipAtPoint(clip, new Vector3(0,20,-1));
 
         }
 
         if (other.gameObject.tag == "Bolt")
         {
+
             Destroy(gameObject);
 
             Destroy(other.gameObject);
+
+            AudioSource.PlayClipAtPoint(clip, new Vector3(0,16,-1));
+
         }
 
     }

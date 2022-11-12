@@ -11,8 +11,8 @@ public class mainMenu : MonoBehaviour
     public void StartGame()
     {
         //Loads the selected scene
-        SceneManager.LoadScene(sceneToLoad);
-        Debug.Log("New Scene Loaded!");
+            SceneManager.LoadScene(sceneToLoad);
+            Debug.Log("New Scene Loaded!");
     }
 
     public void QuitGame()
