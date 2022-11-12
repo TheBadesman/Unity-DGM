@@ -5,6 +5,10 @@ using UnityEngine;
 public class destoryOutOfBounds : MonoBehaviour
 {
     public GameManager gameManager;
+    //Stuff for Lives
+    public LifeManager lifeManager;
+
+    public int LifeToLose;
 
     //Public floats for later
     public float upperBounds = 50.0f;
@@ -16,6 +20,7 @@ public class destoryOutOfBounds : MonoBehaviour
     {
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        lifeManager = GameObject.Find("LifeManager").GetComponent<LifeManager>();
 
     }
 
@@ -30,9 +35,10 @@ public class destoryOutOfBounds : MonoBehaviour
         }
         else if(transform.position.z < lowerBounds)
         {
-
+            //destories object and reduces lives
             Destroy(gameObject);
-            gameManager.isGameOver = true;
+            lifeManager.DecreaseLives(LifeToLose);
+            
 
         }
 

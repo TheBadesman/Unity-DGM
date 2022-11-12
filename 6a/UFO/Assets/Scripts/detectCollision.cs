@@ -8,15 +8,21 @@ public class detectCollision : MonoBehaviour
 
     //calls the score manager and references the manager
     public ScoreManager scoreManager;
+    //Calls the life manager and creates the amount of life to be lost
+    public LifeManager lifeManager;
+
+    public int LifeToLose;
 
     public int scoreToGive;
 
     void Start()
     {
-        //finds and references the score manager
+        //finds and references the score manager, Game manager, and Life manager
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        lifeManager = GameObject.Find("LifeManager").GetComponent<LifeManager>();
 
     }
 
@@ -27,8 +33,8 @@ public class detectCollision : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+            lifeManager.DecreaseLives(LifeToLose);
 
-            Destroy(other.gameObject);
         }
 
         if (other.gameObject.tag == "Bolt")

@@ -111,6 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5521c20733bb749835d0593a20bafe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorChangeDelay: 1
+  startColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  endColor: {r: 1, g: 0, b: 0, a: 1}
   speed: 5
   HasIncreaseFire: 0
 --- !u!114 &527184208621836743
@@ -125,5 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1b17960c128e64789a7bef6cb2e2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  lifeManager: {fileID: 0}
+  LifeToLose: 0
   upperBounds: 40
   lowerBounds: -20

@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1b17960c128e64789a7bef6cb2e2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  lifeManager: {fileID: 0}
+  LifeToLose: 2
   upperBounds: 30
   lowerBounds: -20
 --- !u!54 &8460227400395820904
@@ -156,5 +159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd952588cf23414a900d02c8b01ff8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   scoreManager: {fileID: 0}
   scoreToGive: 200

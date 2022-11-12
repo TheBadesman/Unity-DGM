@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  lifeManager: {fileID: 0}
+  LifeToLose: 1
   upperBounds: 30
   lowerBounds: -20
 --- !u!54 &6378909612173608885
