@@ -3,6 +3,11 @@ using System.Collections;
 
 public class powerUp : MonoBehaviour
 {
+    //set up to increase the life
+    public LifeManager lifeManager;
+
+    public int LifeToChange;
+
     //Sets the delay for the color change, and sets the colors
     [Range(0,10)]
     public float colorChangeDelay = 1;
@@ -14,14 +19,21 @@ public class powerUp : MonoBehaviour
     //Sets up the floats for later use
     public float speed;
 
-    public bool HasIncreaseFire;
+    public bool HasIncreaseLife;
 
-    public bool hasIncreaseFire
+    public bool hasIncreaseLife
     {
-         get {return HasIncreaseFire; }
+         get {return HasIncreaseLife; }
     }
 
     Renderer powerUpColor;
+    //Calls the life manager
+    public void Start()
+    {
+
+    lifeManager = GameObject.Find("LifeManager").GetComponent<LifeManager>();
+
+    }
 
     //gets the component we want to change
     private void Awake()
@@ -49,11 +61,13 @@ public class powerUp : MonoBehaviour
 
             Destroy(gameObject);
 
-            Debug.Log("Player has the increased fire powerup");
+            Debug.Log("Has increased life");
 
-            HasIncreaseFire = true;
+            HasIncreaseLife = true;
 
-            if (HasIncreaseFire == true)
+            lifeManager.IncreaseLives(LifeToChange);
+
+            if (HasIncreaseLife == true)
             {
 
                 Debug.Log("Check for Inventory");

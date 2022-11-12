@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
         if(isGameOver)
         {
             EndGame();
+            GetComponent<AudioSource>().Pause();
         }
         else
         {
