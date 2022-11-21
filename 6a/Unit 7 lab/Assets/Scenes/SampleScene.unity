@@ -391,7 +391,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4db9792e246e70745ba3971236157bba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54a80c24792bc846996f76fb0f38abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: 795de198de1b07d4388a065980f2aa03, type: 2}
+  idObj: {fileID: 11400000, guid: 2079659bff2f55b49a2454765f3d9ce3, type: 2}
 --- !u!1 &762418898
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54a80c24792bc846996f76fb0f38abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: 795de198de1b07d4388a065980f2aa03, type: 2}
+  idObj: {fileID: 11400000, guid: 18e35907873f30d45b5c1b1dd6921156, type: 2}
 --- !u!212 &762418902
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -593,7 +593,6 @@ GameObject:
   - component: {fileID: 1654387682}
   - component: {fileID: 1654387681}
   - component: {fileID: 1654387680}
-  - component: {fileID: 1654387685}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -644,7 +643,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startEvent:
+  setEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 150ac58bcc9771440a2b94a3d7ca4f27, type: 2}
@@ -708,7 +707,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4db9792e246e70745ba3971236157bba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -755,16 +754,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1654387685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654387679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f54a80c24792bc846996f76fb0f38abb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: 2079659bff2f55b49a2454765f3d9ce3, type: 2}
