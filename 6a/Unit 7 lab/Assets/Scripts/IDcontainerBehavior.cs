@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class IDcontainerBehavior : MonoBehaviour
+public class IDContainerBehavior : MonoBehaviour
 {
 
     public ID idObj;

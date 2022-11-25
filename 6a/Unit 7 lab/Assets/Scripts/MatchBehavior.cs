@@ -5,20 +5,20 @@ public class MatchBehavior : MonoBehaviour
 {
 
     public ID idObj;
-    public UnityEvent matchEvent, noMatchEvent, setEvent;
+    public UnityEvent matchEvent, noMatchEvent, startEvent;
     private ID otherID;
 
     public void Start()
     {
 
-        setEvent.Invoke();
+        startEvent.Invoke();
 
     }
 
     public void OnTriggerEnter(Collider other)
     {
 
-        var tempObj = other.GetComponent<IDcontainerBehavior>();
+        var tempObj = other.GetComponent<IDContainerBehavior>();
         if (tempObj == null)
             return;
     

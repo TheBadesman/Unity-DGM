@@ -1,9 +1,12 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.Events;
 
 public class DragBehavior : MonoBehaviour
 {
+
+    public UnityEvent startDragEvent, endDragEvent;
 
     private Camera cameraObj;
 
@@ -25,6 +28,8 @@ public class DragBehavior : MonoBehaviour
 
         draggable = true;
 
+        startDragEvent.Invoke();
+
         yield return new WaitForFixedUpdate();
 
         while (draggable)
@@ -42,6 +47,7 @@ public class DragBehavior : MonoBehaviour
     {
 
         draggable = false;
+        endDragEvent.Invoke();
 
     }
 
