@@ -1,13 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class IDContainerBehavior : MonoBehaviour
+public class IDContainerBehaviour : MonoBehaviour
 {
 
     public ID idObj;
     public UnityEvent startEvent;
 
-    public void Start()
+    public void OnEnable()
     {
 
         startEvent.Invoke();

@@ -5,9 +5,9 @@ using UnityEngine;
 public class SpriteBehavior : MonoBehaviour
 {
 
-    private SpriteRenderer rendererObj;
+    public SpriteRenderer rendererObj;
 
-    private void Start()
+    public void OnEnable()
     {
         
         rendererObj = GetComponent<SpriteRenderer>();
