@@ -6,16 +6,8 @@ using UnityEngine.Events;
 public class MatchBehavior : IDContainerBehaviour
 {
 
-    public ID idObj;
-    public UnityEvent matchEvent, noMatchEvent, startEvent, noMatchDelayedEvent;
+    public UnityEvent matchEvent, noMatchEvent, noMatchDelayedEvent;
     private ID otherID;
-
-    public void Start()
-    {
-
-        startEvent.Invoke();
-
-    }
 
     private IEnumerator OnTriggerEnter(Collider other)
     {

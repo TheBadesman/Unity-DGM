@@ -6,12 +6,12 @@ public class IDContainerBehaviour : MonoBehaviour
 {
 
     public ID idObj;
-    public UnityEvent startEvent;
+    public UnityEvent StartEvent;
 
     public void OnEnable()
     {
 
-        startEvent.Invoke();
+        StartEvent.Invoke();
 
     }
 
