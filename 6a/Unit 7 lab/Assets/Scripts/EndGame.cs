@@ -12,4 +12,11 @@ public class EndGame : MonoBehaviour
 
     }
 
+    public void EndGameFreeze()
+    {
+
+        Time.timeScale = 0;
+
+    }
+
 }
