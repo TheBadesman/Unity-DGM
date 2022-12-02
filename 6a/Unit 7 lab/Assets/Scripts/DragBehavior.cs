@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class DragBehavior : MonoBehaviour
 {
-
+    
     public UnityEvent startDragEvent, endDragEvent;
 
     private Camera cameraObj;
@@ -13,6 +13,7 @@ public class DragBehavior : MonoBehaviour
     public bool draggable;
 
     public Vector3 position, offset;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class DragBehavior : MonoBehaviour
 
     public IEnumerator OnMouseDown()
     {
+
         offset = transform.position - cameraObj.ScreenToWorldPoint(Input.mousePosition);
 
         draggable = true;
