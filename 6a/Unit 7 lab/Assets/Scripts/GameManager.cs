@@ -10,6 +10,13 @@ public class GameManager : MonoBehaviour
 
     public UnityEvent pauseScreenEvent, unpauseEvent;
 
+    public void Start()
+    {
+
+        Time.timeScale = 0;
+
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -35,7 +42,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void PauseGame ()
+    void PauseGame()
     {
 
         Time.timeScale = 0;
@@ -48,5 +55,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
 
     }
+
+    
 
 }

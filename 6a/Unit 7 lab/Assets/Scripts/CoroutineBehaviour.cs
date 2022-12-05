@@ -22,6 +22,10 @@ public class CoroutineBehaviour : MonoBehaviour
 
         startEvent.Invoke();
 
+        wfsObj = new WaitForSeconds(seconds);
+
+        wffuObj = new WaitForFixedUpdate();
+
     }
 
     public void StartCounting()
@@ -33,10 +37,6 @@ public class CoroutineBehaviour : MonoBehaviour
 
     private IEnumerator Counting()
     {
-
-        wfsObj = new WaitForSeconds(seconds);
-
-        wffuObj = new WaitForFixedUpdate();
 
         startCountEvent.Invoke();
 
