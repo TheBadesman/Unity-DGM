@@ -17,6 +17,15 @@ public class CoroutineBehaviour : MonoBehaviour
 
     private WaitForFixedUpdate wffuObj;
 
+    public bool CanRun
+    {
+
+        get => canRun;
+
+        set => canRun = value;
+
+    }
+
     public void Start()
     {
 
