@@ -19,4 +19,10 @@ public class DestoryBehavior : MonoBehaviour
 
     }
 
+    public void KillTheObject()
+    {
+
+        Destroy(gameObject);
+
+    }
 }

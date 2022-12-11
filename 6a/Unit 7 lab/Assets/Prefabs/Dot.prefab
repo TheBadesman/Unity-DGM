@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 7523282000386335816}
   - component: {fileID: 1072920733009101580}
   - component: {fileID: 5043254425424796105}
+  - component: {fileID: -8975843614846139706}
   m_Layer: 6
   m_Name: Dot
   m_TagString: Untagged
@@ -593,3 +594,31 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   colorIDListObj: {fileID: 11400000, guid: cebbd7d6b9a2c6142ab3c056dc16c30e, type: 2}
+--- !u!114 &-8975843614846139706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344021147715686636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a1b01c0a71863c4d80d9d15cf4c46df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: e075f7734c42bfb40b4682f822b5bf65, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6377450678956879920}
+        m_TargetAssemblyTypeName: DestoryBehavior, Assembly-CSharp
+        m_MethodName: KillTheObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
